@@ -1,9 +1,11 @@
 def findClock (b: int):  # Функція, що повертає число ударів
+    sum = 0
     for i in range(b + 1):
-        print(f"Ударів в {i} годину: {i}")
+        sum += i
+    return sum
 
 if __name__ == '__main__':  # Оголошення головного методу
     b: int = 15
-    findClock(b)
+    print(f'Кількість ударів від 00 до 15 години: {findClock(b)}')
 
     input('Press ENTER to exit')
